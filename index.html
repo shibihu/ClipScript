@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<title>ClipScript TH — Plan. Create. Go Viral.</title>
+<style>
+:root{--bg:#080a14;--panel:#101326;--panel2:#171a32;--line:#292d4b;--text:#f6f5ff;--muted:#a6abc9;--purple:#783cff;--purple2:#a46aff;--cyan:#6a8dff;--good:#50d6ad;--danger:#ff6d8c;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#211344 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;color:inherit}.app{min-height:100vh;display:grid;grid-template-columns:245px 1fr;grid-template-rows:76px 1fr 44px}
+header{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid var(--line);background:#090b16eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:800;letter-spacing:-.4px}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#9c61ff,#5224dc);box-shadow:0 8px 24px #6937ff55;font-size:21px}.brand small{display:block;font-size:11px;color:#b69aff;font-weight:600;letter-spacing:.3px}
+.top-right{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:#111429}
+aside{border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:8px;background:#0b0d1a}.nav{padding:12px 14px;border-radius:12px;background:transparent;text-align:left;color:var(--muted);display:flex;gap:12px;align-items:center}.nav.active,.nav:hover{background:linear-gradient(100deg,#6328d9,#4222a2);color:white}.nav .ico{font-size:18px;width:23px;text-align:center}.side-tip{margin-top:auto;padding:17px;border:1px solid #39305f;background:linear-gradient(150deg,#251849,#12152a);border-radius:16px;color:#c9c2ec;font-size:13px}.side-tip strong{display:block;color:#fff;margin-bottom:6px}
+main{padding:26px;min-width:0;max-width:1600px;width:100%;margin:0 auto}.hero{min-height:245px;border:1px solid #3b2b72;border-radius:22px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden;background:radial-gradient(ellipse at 82% 55%,#7136e8 0,transparent 33%),linear-gradient(115deg,#17122f,#15142d 52%,#382078);position:relative}.hero:after{content:"▶";position:absolute;right:8%;font-size:170px;font-weight:900;color:#c6b4ff12;transform:rotate(-8deg);pointer-events:none}.hero-copy{max-width:650px;z-index:1}.eyebrow{color:#c3a6ff;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}.hero h1{font-size:clamp(27px,3vw,42px);line-height:1.2;letter-spacing:-1px;margin:10px 0}.hero p{color:#c4c5df;max-width:590px;margin:0 0 20px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:11px 17px;border-radius:12px;background:#202442;border:1px solid #373d65;color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn.primary{background:linear-gradient(110deg,#8a42ff,#6334f1);border-color:transparent;box-shadow:0 8px 25px #7337ff33}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.btn.small{padding:7px 11px;font-size:13px}.btn.ghost{background:transparent}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:27px 0 14px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.4px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project{border:1px solid var(--line);background:linear-gradient(160deg,#15182e,#0f1223);border-radius:17px;overflow:hidden;min-width:0;transition:.2s}.project:hover{border-color:#7851d8;transform:translateY(-2px)}.thumb{height:130px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#24465f,#1c1741)}.thumb:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ffffff16;right:-25px;top:-55px}.thumb .symbol{font-size:55px;filter:drop-shadow(0 8px 15px #0006)}.thumb .tag{position:absolute;top:12px;left:12px;border-radius:7px;padding:5px 8px;background:#080a15b8;font-size:11px;color:#f2edff}.project-content{padding:14px}.project h3{margin:0 0 8px;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}.project-actions{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.quick{padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#14172b,#0f1222);text-align:left;min-height:138px}.quick:hover{border-color:#7950db;background:#1b1937}.quick .qico{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#2a2251;color:#c5a6ff;font-size:21px;margin-bottom:12px}.quick strong{display:block;margin-bottom:5px}.quick span{color:var(--muted);font-size:12px}.features{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:10px}.feature{padding:14px 10px;display:flex;gap:9px;border-right:1px solid var(--line)}.feature:last-child{border:0}.feature .ficon{font-size:21px;color:#a985ff}.feature strong{display:block;font-size:12px}.feature span{display:block;color:var(--muted);font-size:11px;margin-top:3px}footer{grid-column:1/-1;border-top:1px solid var(--line);padding:12px 27px;color:#777e9e;font-size:11px;display:flex;justify-content:space-between;gap:12px}
+.empty{grid-column:1/-1;border:1px dashed #454568;border-radius:16px;padding:34px;text-align:center;color:var(--muted)}.empty .big{font-size:35px;color:#a87aff}.hidden{display:none!important}
+.overlay{position:fixed;inset:0;background:#050611d9;z-index:20;display:grid;place-items:center;padding:16px;overflow:auto}.modal{width:min(760px,100%);max-height:92vh;overflow:auto;border:1px solid #39365e;border-radius:20px;background:#111427;box-shadow:0 30px 100px #0009}.modal-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line);gap:12px}.modal-head h2{font-size:20px;margin:0}.xbtn{width:34px;height:34px;border-radius:10px;background:#252943;font-size:20px}.modal-body{padding:22px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:13px;color:#c5c8e0;font-weight:700}.field input,.field textarea,.field select{width:100%;border:1px solid #343958;background:#0b0e1c;border-radius:11px;padding:11px 12px;color:#fff;outline:none}.field input:focus,.field textarea:focus{border-color:#8c60ff}.field textarea{min-height:92px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.muted{color:var(--muted)}.editor-top{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.scene-list{display:flex;flex-direction:column;gap:12px}.scene{border:1px solid #333857;border-radius:14px;background:#0d1020;padding:14px}.scene-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.scene-head strong{color:#c4a5ff}.scene-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.scene-grid .field{margin:0}.scene-grid textarea{min-height:66px}.scene-foot{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}.notice{padding:12px 14px;border-radius:12px;background:#1b1837;border:1px solid #393063;color:#cfc4ff;font-size:13px;margin-bottom:15px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:50;padding:12px 17px;border:1px solid #47416e;border-radius:12px;background:#1c1b36;box-shadow:0 12px 40px #0008;color:white}
+@media(max-width:1050px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features{grid-template-columns:repeat(3,minmax(0,1fr))}.hero:after{right:0;font-size:130px}}
+@media(max-width:700px){.app{grid-template-columns:1fr;grid-template-rows:64px auto 1fr 40px}header{padding:0 15px}.brand{font-size:18px}header .top-right .pill{display:none}aside{grid-row:2;border-right:0;border-bottom:1px solid var(--line);padding:8px;display:flex;flex-direction:row;overflow:auto;gap:5px}.nav{white-space:nowrap;padding:9px 11px;font-size:12px}.nav .ico{font-size:15px;width:auto}.side-tip{display:none}main{padding:15px}.hero{padding:22px;min-height:0}.hero h1{font-size:29px}.hero:after{display:none}.project-grid{grid-template-columns:1fr}.thumb{height:150px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.quick{padding:13px;min-height:128px}.features{grid-template-columns:1fr 1fr}.feature{border:0;border-bottom:1px solid var(--line)}footer{padding:10px 14px}footer span:last-child{display:none}.form-row,.scene-grid{grid-template-columns:1fr}.modal-body{padding:16px}.modal-head{padding:16px}}
+/* Auto Timeline */
+#atPanel{border:1px solid #3b3270;border-radius:14px;background:#0e1124;padding:14px;margin-bottom:16px}.at-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.at-head strong{color:#c4a5ff;font-size:16px}.at-note{margin:0 0 12px;padding:10px 12px;border-radius:10px;background:#1b1837;border:1px solid #393063;color:#cfc4ff;font-size:12.5px}.at-controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:12px}.at-controls .field{margin:0}.at-controls input:disabled{opacity:.55;cursor:not-allowed}.at-result{margin-top:14px}.at-sub{margin:0 0 8px;font-size:16px}.at-total{font-size:14px;margin-bottom:8px}.at-warn,.at-ok,.at-msg{padding:10px 12px;border-radius:10px;font-size:13px;margin:8px 0}.at-warn{border:1px solid #ff6d8c88;background:#2a1220;color:#ffc2cf}.at-ok{border:1px solid #50d6ad88;background:#0f2a26;color:#a8f0d9}.at-msg.error{border:1px solid #ff6d8c88;background:#2a1220;color:#ffc2cf}.at-msg.success{border:1px solid #50d6ad88;background:#0f2a26;color:#a8f0d9}.at-msg.info{border:1px solid #6a8dff88;background:#12183a;color:#c9d4ff}.at-hint{color:var(--muted);font-size:12px;margin:8px 0}.at-rows{list-style:none;margin:10px 0;padding:0;display:flex;flex-direction:column;gap:10px}.at-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 12px;align-items:center;padding:10px;border:1px solid #2b3050;border-radius:12px;background:#0b0e1c}.at-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}.at-track{position:relative;height:14px;border-radius:7px;background:#1a1e38;overflow:hidden}.at-bar{position:absolute;top:0;bottom:0;border-radius:7px;background:linear-gradient(90deg,#8a42ff,#6a8dff)}.at-bar.src-kept{background:#50d6ad}.at-bar.src-default{background:#a6abc9}.at-bar.src-manual{background:#f5b94c}.at-bar.bad{background:var(--danger)}.at-times{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12px;color:var(--muted)}.at-times strong{color:#fff}.at-chip{display:inline-block;border:1px solid #4a4478;border-radius:999px;padding:1px 9px;font-size:11px;color:#cfc4ff;background:#1b1837}.at-chip.bad{border-color:#ff6d8c;color:#ffc2cf}.at-durlabel{display:inline-flex;gap:6px;align-items:center;color:#c5c8e0}.at-dur{width:84px;min-height:36px;padding:5px 8px;border:1px solid #343958;background:#0b0e1c;border-radius:8px;color:#fff}.at-old{opacity:.8}#atPanel button:focus-visible,#atPanel input:focus-visible,#atPanel select:focus-visible,#atToggle:focus-visible{outline:2px solid #a46aff;outline-offset:2px}#atPanel .actions{margin-top:10px}
+@media(max-width:1050px){.at-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.at-controls{grid-template-columns:1fr}.at-row{grid-template-columns:1fr}.at-name{white-space:normal}.at-dur{width:100px}#atPanel{padding:12px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo">▶</div><div>ClipScript TH<small>Plan. Create. Go Viral.</small></div></div>
+  <div class="top-right"><span class="pill">⚡ เวอร์ชันเริ่มต้น · ไม่ต้องใช้ API</span><span>●</span><strong style="color:#fff">Creator</strong></div>
+</header>
+<aside>
+  <button class="nav active" data-nav="home"><span class="ico">⌂</span>หน้าหลัก</button>
+  <button class="nav" data-nav="projects"><span class="ico">▣</span>โปรเจกต์ของฉัน</button>
+  <button class="nav" data-nav="templates"><span class="ico">▤</span>เทมเพลต</button>
+  <button class="nav" data-nav="guide"><span class="ico">ⓘ</span>คู่มือการใช้งาน</button>
+  <button class="nav" data-nav="about"><span class="ico">✦</span>เกี่ยวกับเรา</button>
+  <div class="side-tip"><strong>💡 เคล็ดลับ</strong>เริ่มจากสคริปต์สั้น ๆ แบ่งเป็นฉาก แล้วเพิ่มภาพประกอบและเวลาใน Storyboard</div>
+</aside>
+<main>
+  <section id="homeView">
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">วางแผนคลิปให้ง่ายขึ้น</div>
+        <h1>เปลี่ยนไอเดีย<br>ให้เป็นวิดีโอที่น่าดู</h1>
+        <p>เครื่องมือวางแผนสคริปต์ แบ่งฉาก จัดการภาพประกอบ และเตรียมไฟล์สำหรับตัดต่อ — เริ่มต้นได้โดยไม่ต้องใช้ AI API</p>
+        <div class="actions"><button class="btn primary" id="heroCreate">＋ สร้างโปรเจกต์ใหม่</button><button class="btn" id="heroGuide">▷ ดูวิธีใช้งาน</button></div>
+      </div>
+    </div>
+    <div class="section-head"><div><h2>◷ โปรเจกต์ล่าสุด</h2><p>โปรเจกต์จะถูกบันทึกไว้ในเบราว์เซอร์ของอุปกรณ์นี้</p></div><button class="btn ghost small" id="seeAll">ดูทั้งหมด →</button></div>
+    <div class="project-grid" id="projectGrid"></div>
+    <div class="section-head"><div><h2>⚡ เริ่มต้นใช้งาน</h2><p>เครื่องมือที่คุณต้องใช้ในเวิร์กโฟลว์เดียว</p></div></div>
+    <div class="quick-grid">
+      <button class="quick" id="quickCreate"><div class="qico">▤</div><strong>สร้างโปรเจกต์ใหม่</strong><span>เริ่มจากสคริปต์หรือเทมเพลต</span></button>
+      <button class="quick" id="quickTemplate"><div class="qico">▧</div><strong>ใช้เทมเพลต</strong><span>เริ่มจากโครงสร้างที่เตรียมไว้</span></button>
+      <button class="quick" id="quickImport"><div class="qico">⇧</div><strong>นำเข้าโปรเจกต์</strong><span>เปิดไฟล์สำรอง JSON จากเครื่อง</span></button>
+      <button class="quick" id="quickGuide"><div class="qico">▣</div><strong>คู่มือการใช้งาน</strong><span>เรียนรู้ขั้นตอนแบบสั้น ๆ</span></button>
+    </div>
+    <div class="section-head"><div><h2>✧ ฟีเจอร์ของ ClipScript TH</h2></div></div>
+    <div class="features">
+      <div class="feature"><div class="ficon">▤</div><div><strong>Script Editor</strong><span>เขียนและแบ่งสคริปต์</span></div></div>
+      <div class="feature"><div class="ficon">▦</div><div><strong>Storyboard</strong><span>ภาพประกอบและ SFX</span></div></div>
+      <div class="feature"><div class="ficon">◷</div><div><strong>Timeline</strong><span>จัดการเวลาและ Subtitle</span></div></div>
+      <div class="feature"><div class="ficon">⇩</div><div><strong>Export</strong><span>SRT, CSV, Markdown</span></div></div>
+      <div class="feature"><div class="ficon">TH</div><div><strong>ภาษาไทย</strong><span>ออกแบบเพื่อผู้ใช้ไทย</span></div></div>
+    </div>
+  </section>
+  <section id="projectsView" class="hidden">
+    <div class="section-head" style="margin-top:0"><div><h2>โปรเจกต์ของฉัน</h2><p>จัดการโปรเจกต์ทั้งหมดที่บันทึกไว้ในอุปกรณ์นี้</p></div><button class="btn primary" id="projectsCreate">＋ สร้างโปรเจกต์</button></div>
+    <div class="project-grid" id="allProjectGrid"></div>
+  </section>
+  <section id="templatesView" class="hidden">
+    <div class="section-head" style="margin-top:0"><div><h2>เทมเพลตเริ่มต้น</h2><p>เลือกโครงสร้างเพื่อเริ่มทำคลิปได้เร็วขึ้น</p></div></div>
+    <div class="quick-grid" id="templateGrid"></div>
+  </section>
+  <section id="guideView" class="hidden">
+    <div class="section-head" style="margin-top:0"><div><h2>คู่มือการใช้งาน</h2><p>เริ่มทำโปรเจกต์แรกในไม่กี่ขั้นตอน</p></div></div>
+    <div class="project" style="padding:22px;line-height:1.9">
+      <h3>1. สร้างโปรเจกต์</h3><p class="muted">กด “สร้างโปรเจกต์ใหม่” ตั้งชื่อคลิป แล้วเลือกเป้าหมายของวิดีโอ</p>
+      <h3>2. แบ่งสคริปต์เป็นฉาก</h3><p class="muted">แนะนำให้แต่ละฉากมีใจความเดียว เพิ่มเสียงพากย์ ภาพที่ต้องการค้นหา ข้อความบนจอ และเสียงเอฟเฟกต์</p>
+      <h3>3. กำหนดเวลา</h3><p class="muted">ใส่เวลาเริ่มและเวลาจบของแต่ละฉากตามเสียงพากย์จริง ระบบจะใช้ข้อมูลนี้สร้างไฟล์ Subtitle SRT หรือกดปุ่ม “Auto Timeline” ในหน้าแก้ไขเพื่อให้ระบบประมาณเวลาจากบทพูดก่อน (เป็นค่าประมาณเท่านั้น)</p>
+      <h3>4. ส่งออก</h3><p class="muted">ส่งออก Markdown สำหรับแผนงาน, CSV สำหรับตารางฉาก, SRT สำหรับ Subtitle หรือ JSON เพื่อสำรองและย้ายโปรเจกต์</p>
+      <div class="notice">ข้อมูลเวอร์ชันนี้เก็บในเบราว์เซอร์ของอุปกรณ์คุณ หากล้างข้อมูลเว็บไซต์ โปรเจกต์อาจหายได้ ควรส่งออก JSON เพื่อสำรองเป็นระยะ</div>
+      <button class="btn primary" id="guideCreate">＋ สร้างโปรเจกต์แรก</button>
+    </div>
+  </section>
+  <section id="aboutView" class="hidden">
+    <div class="hero"><div class="hero-copy"><div class="eyebrow">About ClipScript TH</div><h1>วางแผนก่อนตัดต่อ<br>สร้างสรรค์ได้อย่างมั่นใจ</h1><p>ClipScript TH เป็นเครื่องมือช่วยวางแผนวิดีโอสำหรับครีเอเตอร์ โดยเริ่มจากเวอร์ชันที่ใช้งานได้โดยไม่ต้องมีบัญชีหรือเชื่อมต่อ AI API</p></div></div>
+  </section>
+</main>
+<footer><span><strong style="color:#c6c7dd">ClipScript TH</strong> · เวอร์ชันต้นแบบ</span><span>ข้อมูลบันทึกในอุปกรณ์ของคุณ · ไม่มี AI API ในเวอร์ชันนี้</span></footer>
+</div>
+<div id="modalRoot"></div><div id="toastRoot"></div><input type="file" id="importFile" accept=".json,application/json" class="hidden"><script src="autotimeline.js"></script>
+<script>
+(() => {
+const KEY='clipscript-th-projects-v1';
+const templates=[
+ {name:'H.C.B.R Viral Story',category:'เล่าเรื่อง',symbol:'🎬',desc:'Hook → Context → But → Reveal',scenes:[
+  {section:'Hook',voice:'เขาคนนี้รอดจากเหตุการณ์ที่ไม่น่าเป็นไปได้',visual:'ภาพเหตุการณ์หรือบุคคลจริงที่เกี่ยวข้อง',onscreen:'เรื่องนี้เกิดขึ้นจริง',sfx:'Impact hit',start:0,end:4},
+  {section:'Context',voice:'ย้อนกลับไปดูว่าเกิดอะไรขึ้นก่อนหน้านั้น',visual:'ฟุตเทจสถานที่และแผนที่',onscreen:'ย้อนกลับไป...',sfx:'Whoosh',start:4,end:10},
+  {section:'But',voice:'แต่สิ่งที่เกิดขึ้นต่อจากนั้นกลับเปลี่ยนทุกอย่าง',visual:'ภาพเปลี่ยนจังหวะเร็วขึ้น',onscreen:'แต่แล้ว...',sfx:'Riser',start:10,end:15},
+  {section:'Reveal',voice:'นี่คือคำอธิบายที่ทำให้เรื่องนี้น่าทึ่ง',visual:'ภาพหลักฐานหรือคำอธิบาย',onscreen:'ความจริงคือ...',sfx:'Low hit',start:15,end:23}
+ ]},
+ {name:'Everyday Curiosity',category:'ความรู้',symbol:'💡',desc:'เปิดด้วยคำถามแล้วอธิบายเหตุผล',scenes:[
+  {section:'Hook',voice:'เคยสงสัยไหมว่าทำไมเรื่องนี้ถึงเกิดขึ้น',visual:'ภาพระยะใกล้ของสิ่งที่เป็นคำถาม',onscreen:'ทำไมถึงเป็นแบบนี้?',sfx:'Pop',start:0,end:3},
+  {section:'Context',voice:'สิ่งที่เราเห็นมีคำอธิบายทางวิทยาศาสตร์',visual:'ภาพตัวอย่างหรือการทดลอง',onscreen:'สิ่งที่เกิดขึ้น',sfx:'Whoosh',start:3,end:8},
+  {section:'Reveal',voice:'สาเหตุสำคัญคือ...',visual:'ภาพอธิบายกลไกหรือแผนภาพ',onscreen:'คำตอบคือ...',sfx:'Reveal',start:8,end:18}
+ ]},
+ {name:'Product Showcase',category:'รีวิว',symbol:'📦',desc:'ปัญหา → สาธิต → จุดเด่น → สรุป',scenes:[
+  {section:'Hook',voice:'นี่คือสิ่งที่ช่วยแก้ปัญหานี้ได้',visual:'ภาพสินค้าและปัญหา',onscreen:'แก้ปัญหานี้ได้ไหม?',sfx:'Pop',start:0,end:3},
+  {section:'Demo',voice:'มาดูวิธีใช้งานจริงกัน',visual:'ภาพสาธิตขั้นตอน',onscreen:'วิธีใช้งาน',sfx:'Click',start:3,end:9},
+  {section:'Benefits',voice:'จุดเด่นคือใช้งานง่ายและประหยัดเวลา',visual:'ภาพแสดงผลลัพธ์',onscreen:'จุดเด่น',sfx:'Whoosh',start:9,end:14},
+  {section:'Summary',voice:'นี่คือสิ่งที่ควรรู้ก่อนตัดสินใจ',visual:'ภาพสินค้าในมุมชัดเจน',onscreen:'สรุป',sfx:'Soft hit',start:14,end:19}
+ ]}
+];
+let projects=load();
+let activeId=null;
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(projects));return true}catch(e){toast('บันทึกไม่สำเร็จ: พื้นที่เก็บข้อมูลอาจเต็ม');return false}}
+function uid(){return 'p_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,7)}
+function escapeHtml(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(msg){const root=document.getElementById('toastRoot');root.innerHTML=`<div class="toast">${escapeHtml(msg)}</div>`;setTimeout(()=>root.innerHTML='',2600)}
+function formatDate(ts){return new Date(ts).toLocaleDateString('th-TH',{day:'numeric',month:'short',year:'numeric'})}
+function totalDuration(p){return Math.max(0,...(p.scenes||[]).map(s=>Number(s.end)||0))}
+function card(p){const gradients=['linear-gradient(135deg,#28516a,#35206c)','linear-gradient(135deg,#35513e,#1e2859)','linear-gradient(135deg,#69472d,#32214e)','linear-gradient(135deg,#8b4b61,#31215f)'];let idx=Math.abs((p.name||'').length+(p.scenes||[]).length)%gradients.length;
+return `<article class="project"><div class="thumb" style="background:${gradients[idx]}"><span class="symbol">${escapeHtml(p.symbol||'🎬')}</span><span class="tag">${escapeHtml(p.category||'วิดีโอ')}</span></div><div class="project-content"><h3 title="${escapeHtml(p.name)}">${escapeHtml(p.name)}</h3><div class="meta"><span>▦ ${(p.scenes||[]).length} ฉาก</span><span>◷ ${formatDate(p.updated||p.created||Date.now())}</span></div><div class="project-actions"><span class="meta">${totalDuration(p)} วินาทีโดยประมาณ</span><button class="btn primary small" data-open="${p.id}">▶ เปิด</button></div><div style="display:flex;justify-content:flex-end;margin-top:10px"><button class="btn ghost small" data-export-json="${p.id}">สำรอง JSON</button><button class="btn ghost small" data-delete="${p.id}">ลบ</button></div></div></article>`}
+function renderProjects(){const html=projects.slice().sort((a,b)=>(b.updated||b.created)-(a.updated||a.created)).map(card).join('')||`<div class="empty"><div class="big">＋</div><strong>ยังไม่มีโปรเจกต์</strong><p>สร้างโปรเจกต์แรกของคุณเพื่อเริ่มวางแผนคลิป</p><button class="btn primary" data-create>สร้างโปรเจกต์ใหม่</button></div>`;document.getElementById('projectGrid').innerHTML=html;document.getElementById('allProjectGrid').innerHTML=html}
+function renderTemplates(){document.getElementById('templateGrid').innerHTML=templates.map((t,i)=>`<button class="quick" data-template="${i}"><div class="qico">${t.symbol}</div><strong>${escapeHtml(t.name)}</strong><span>${escapeHtml(t.desc)}</span></button>`).join('')}
+function view(name){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));const el=document.getElementById(name+'View');if(el)el.classList.remove('hidden');document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.nav===name));}
+function modal(title,body){document.getElementById('modalRoot').innerHTML=`<div class="overlay" id="overlay"><div class="modal"><div class="modal-head"><h2>${title}</h2><button class="xbtn" data-close aria-label="ปิด">×</button></div><div class="modal-body">${body}</div></div></div>`;document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal()})}
+function closeModal(){document.getElementById('modalRoot').innerHTML=''}
+function createForm(templateIndex=null){const t=templateIndex!==null?templates[templateIndex]:null;modal('สร้างโปรเจกต์ใหม่',`<form id="createForm"><div class="field"><label for="projectName">ชื่อโปรเจกต์ *</label><input id="projectName" maxlength="100" required placeholder="เช่น เรื่องจริงที่น่าทึ่ง" value="${t?escapeHtml(t.name):''}"></div><div class="form-row"><div class="field"><label for="projectCategory">หมวดหมู่</label><select id="projectCategory"><option ${t?.category==='เล่าเรื่อง'?'selected':''}>เล่าเรื่อง</option><option ${t?.category==='ความรู้'?'selected':''}>ความรู้</option><option ${t?.category==='รีวิว'?'selected':''}>รีวิว</option><option>ท่องเที่ยว</option><option>อื่น ๆ</option></select></div><div class="field"><label for="projectDuration">ความยาวเป้าหมาย</label><select id="projectDuration"><option value="30">30 วินาที</option><option value="45">45 วินาที</option><option value="60">60 วินาที</option><option value="90">90 วินาที</option></select></div></div><div class="field"><label for="projectIdea">ไอเดีย / สคริปต์ตั้งต้น (ไม่บังคับ)</label><textarea id="projectIdea" placeholder="วางสคริปต์หรือสรุปไอเดียของคลิป..."></textarea></div><div class="notice">ไม่ใช้ AI API — โปรเจกต์จะถูกบันทึกในเบราว์เซอร์ของคุณ</div><div class="actions" style="justify-content:flex-end"><button type="button" class="btn" data-close>ยกเลิก</button><button class="btn primary" type="submit">สร้างโปรเจกต์ →</button></div></form>`);
+document.getElementById('createForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('projectName').value.trim();if(!name)return;let scenes=t?JSON.parse(JSON.stringify(t.scenes)):[];const idea=document.getElementById('projectIdea').value.trim();if(idea){const lines=idea.split(/\n+/).map(x=>x.trim()).filter(Boolean);scenes=lines.map((line,i)=>({section:i===0?'Hook':i===lines.length-1?'Reveal':'Context',voice:line,visual:'เพิ่มคำค้นหาภาพประกอบสำหรับฉากนี้',onscreen:'',sfx:'',start:i*4,end:(i+1)*4}))}const now=Date.now();const p={id:uid(),name,category:document.getElementById('projectCategory').value,targetDuration:Number(document.getElementById('projectDuration').value),symbol:t?.symbol||'🎬',scenes,created:now,updated:now};projects.unshift(p);save();renderProjects();closeModal();openEditor(p.id)})}
+function openEditor(id){activeId=id;const p=projects.find(x=>x.id===id);if(!p)return;const scenes=p.scenes||[];modal('Script Editor · '+escapeHtml(p.name),`<div class="notice">แก้ไขสคริปต์ ภาพประกอบ Subtitle และเวลาได้ในแต่ละฉาก ข้อมูลจะบันทึกอัตโนมัติในอุปกรณ์นี้</div><div class="editor-top"><button class="btn primary small" id="addScene">＋ เพิ่มฉาก</button>${autoTimeline?`<button class="btn small" id="atToggle" aria-expanded="false" aria-controls="atPanel">◷ Auto Timeline</button>`:''}<button class="btn small" id="exportMd">Export Markdown</button><button class="btn small" id="exportCsv">Export CSV</button><button class="btn small" id="exportSrt">Export SRT</button><button class="btn small" id="exportJson">สำรอง JSON</button></div><div id="atPanel" class="hidden" role="region" aria-label="Auto Timeline"></div><div class="field"><label>ชื่อโปรเจกต์</label><input id="editProjectName" value="${escapeHtml(p.name)}" maxlength="100"></div><div class="field"><label>หมวดหมู่</label><select id="editCategory">${['เล่าเรื่อง','ความรู้','รีวิว','ท่องเที่ยว','อื่น ๆ'].map(c=>`<option ${p.category===c?'selected':''}>${c}</option>`).join('')}</select></div><div id="sceneList" class="scene-list">${scenes.length?scenes.map((s,i)=>sceneHtml(s,i)).join(''):`<div class="empty">โปรเจกต์นี้ยังไม่มีฉาก กด “เพิ่มฉาก” เพื่อเริ่มต้น</div>`}</div><div class="actions" style="justify-content:space-between;margin-top:18px"><button class="btn ghost" id="closeEditor">ปิด</button><button class="btn primary" id="saveEditor">บันทึกโปรเจกต์</button></div>`);
+document.getElementById('addScene').onclick=()=>{const latest=readEditor();latest.scenes.push({section:'Scene',voice:'',visual:'',onscreen:'',sfx:'',start:latest.scenes.length?Number(latest.scenes[latest.scenes.length-1].end)||0:0,end:(latest.scenes.length?Number(latest.scenes[latest.scenes.length-1].end)||0:0)+4});applyEditorData(latest);};
+document.getElementById('saveEditor').onclick=()=>{persistEditor();toast('บันทึกโปรเจกต์แล้ว')};
+document.getElementById('closeEditor').onclick=()=>{persistEditor();closeModal();renderProjects()};
+document.getElementById('exportMd').onclick=()=>{persistEditor();downloadMarkdown(findProject(id))};
+document.getElementById('exportCsv').onclick=()=>{persistEditor();downloadCsv(findProject(id))};
+document.getElementById('exportSrt').onclick=()=>{persistEditor();downloadSrt(findProject(id))};
+document.getElementById('exportJson').onclick=()=>{persistEditor();downloadJson(findProject(id))};
+document.getElementById('sceneList').addEventListener('click',e=>{const del=e.target.closest('[data-scene-delete]');const up=e.target.closest('[data-scene-up]');const down=e.target.closest('[data-scene-down]');if(!del&&!up&&!down)return;let data=readEditor(),i=Number((del||up||down).dataset.sceneDelete??(up||{}).dataset?.sceneUp??(down||{}).dataset?.sceneDown);if(del){data.scenes.splice(i,1)}else{const j=i+(up?-1:1);if(j<0||j>=data.scenes.length)return;[data.scenes[i],data.scenes[j]]=[data.scenes[j],data.scenes[i]]}applyEditorData(data)});
+document.getElementById('sceneList').addEventListener('input',()=>{clearTimeout(window.__csSaveTimer);window.__csSaveTimer=setTimeout(()=>persistEditor(false),350)});
+document.getElementById('editProjectName').addEventListener('input',()=>{clearTimeout(window.__csSaveTimer);window.__csSaveTimer=setTimeout(()=>persistEditor(false),350)});
+document.getElementById('editCategory').addEventListener('change',()=>persistEditor(false));
+if(autoTimeline)autoTimeline.init(id);
+}
+function sceneHtml(s,i){return `<div class="scene" data-scene="${i}"><div class="scene-head"><strong>ฉาก ${i+1} · ${escapeHtml(s.section||'Scene')}</strong><div style="display:flex;gap:5px"><button class="btn ghost small" data-scene-up="${i}" title="เลื่อนขึ้น">↑</button><button class="btn ghost small" data-scene-down="${i}" title="เลื่อนลง">↓</button><button class="btn ghost small" data-scene-delete="${i}" title="ลบฉาก">ลบ</button></div></div><div class="scene-grid"><div class="field"><label>ส่วนของเรื่อง</label><input data-field="section" value="${escapeHtml(s.section||'')}" placeholder="Hook / Context / But / Reveal"></div><div class="field"><label>เสียงพากย์ / บทพูด</label><textarea data-field="voice" placeholder="ข้อความที่พูดในฉากนี้">${escapeHtml(s.voice||'')}</textarea></div><div class="field"><label>ภาพประกอบ / B-roll</label><textarea data-field="visual" placeholder="ภาพที่ต้องหา หรือสิ่งที่ต้องถ่าย">${escapeHtml(s.visual||'')}</textarea></div><div class="field"><label>ข้อความบนจอ / Subtitle</label><textarea data-field="onscreen" placeholder="ข้อความที่แสดงบนวิดีโอ">${escapeHtml(s.onscreen||'')}</textarea></div><div class="field"><label>เสียงเอฟเฟกต์ (SFX)</label><input data-field="sfx" value="${escapeHtml(s.sfx||'')}" placeholder="เช่น Whoosh, Impact"></div><div class="form-row"><div class="field"><label>เริ่ม (วินาที)</label><input data-field="start" type="number" min="0" step=".1" value="${Number(s.start)||0}"></div><div class="field"><label>จบ (วินาที)</label><input data-field="end" type="number" min="0" step=".1" value="${Number(s.end)||0}"></div></div></div></div>`}
+function readEditor(){const p=findProject(activeId);if(!p)return {scenes:[]};const name=document.getElementById('editProjectName')?.value.trim()||p.name;const category=document.getElementById('editCategory')?.value||p.category;const scenes=[...document.querySelectorAll('.scene')].map(el=>{const o={};el.querySelectorAll('[data-field]').forEach(input=>{o[input.dataset.field]=input.type==='number'?Number(input.value)||0:input.value});return o});return {...p,name,category,scenes}}
+function applyEditorData(data){const p=findProject(activeId);if(!p)return;p.name=data.name||p.name;p.category=data.category||p.category;p.scenes=data.scenes;p.updated=Date.now();save();openEditor(activeId)}
+function persistEditor(show=true){const p=findProject(activeId);if(!p)return;const d=readEditor();p.name=d.name;p.category=d.category;p.scenes=d.scenes;p.updated=Date.now();save();renderProjects();if(show){}}
+function findProject(id){return projects.find(p=>p.id===id)}
+function download(name,content,type='text/plain;charset=utf-8'){const blob=new Blob(['\ufeff',content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function safeName(name){return (name||'clipscript-project').replace(/[\\/:*?"<>|]+/g,'-').slice(0,80)}
+function downloadMarkdown(p){if(!p)return;let out=`# ${p.name}\n\nหมวดหมู่: ${p.category}\nเป้าหมาย: ${p.targetDuration||0} วินาที\n\n`;p.scenes.forEach((s,i)=>{out+=`## ฉาก ${i+1}: ${s.section||'Scene'}\n- เวลา: ${s.start}s – ${s.end}s\n- ระยะเวลา: ${atSceneDuration(s)}s\n- เสียงพากย์: ${s.voice||''}\n- ภาพประกอบ: ${s.visual||''}\n- ข้อความบนจอ: ${s.onscreen||''}\n- SFX: ${s.sfx||''}\n\n`});download(safeName(p.name)+'.md',out)}
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function downloadCsv(p){if(!p)return;const rows=[['Scene','Section','Voiceover','Visual / B-roll','On-screen text','SFX','Start (s)','End (s)','Duration (s)'],...p.scenes.map((s,i)=>[i+1,s.section,s.voice,s.visual,s.onscreen,s.sfx,s.start,s.end,atSceneDuration(s)])];download(safeName(p.name)+'.csv',rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8')}
+function timeSrt(sec){sec=Math.max(0,Number(sec)||0);const ms=Math.round(sec*1000);const h=Math.floor(ms/3600000),m=Math.floor(ms%3600000/60000),s=Math.floor(ms%60000/1000),milli=ms%1000;return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')},${String(milli).padStart(3,'0')}`}
+function downloadSrt(p){if(!p)return;let n=0;const blocks=p.scenes.filter(s=>(s.onscreen||s.voice||'').trim()).map(s=>`${++n}\n${timeSrt(s.start)} --> ${timeSrt(Math.max(Number(s.start)||0.1,Number(s.end)||0.1))}\n${(s.onscreen||s.voice||'').trim()}\n`);download(safeName(p.name)+'.srt',blocks.join('\n'))}
+function downloadJson(p){if(!p)return;download(safeName(p.name)+'.json',JSON.stringify(p,null,2),'application/json')}
+function deleteProject(id){const p=findProject(id);if(!p)return;if(!confirm(`ต้องการลบโปรเจกต์ “${p.name}” หรือไม่?`))return;projects=projects.filter(x=>x.id!==id);save();renderProjects();toast('ลบโปรเจกต์แล้ว')}
+function importJson(file){const reader=new FileReader();reader.onload=()=>{try{const obj=JSON.parse(reader.result);const list=Array.isArray(obj)?obj:[obj];let count=0;list.forEach(p=>{if(p&&typeof p.name==='string'&&Array.isArray(p.scenes)){p.id=uid();p.created=Date.now();p.updated=Date.now();projects.unshift(p);count++}});if(!count)throw Error('invalid');save();renderProjects();toast(`นำเข้า ${count} โปรเจกต์แล้ว`)}catch(e){toast('ไฟล์ไม่ถูกต้อง กรุณาเลือกไฟล์ JSON ที่สำรองจาก ClipScript TH')}document.getElementById('importFile').value=''};reader.readAsText(file)}
+document.body.addEventListener('click',e=>{
+ const close=e.target.closest('[data-close]');if(close){closeModal();return}
+ const create=e.target.closest('[data-create]');if(create){createForm();return}
+ const op=e.target.closest('[data-open]');if(op){openEditor(op.dataset.open);return}
+ const del=e.target.closest('[data-delete]');if(del){deleteProject(del.dataset.delete);return}
+ const exp=e.target.closest('[data-export-json]');if(exp){downloadJson(findProject(exp.dataset.exportJson));return}
+ const templ=e.target.closest('[data-template]');if(templ){createForm(Number(templ.dataset.template));return}
+});
+document.querySelectorAll('[data-nav]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.nav)));
+['heroCreate','quickCreate','projectsCreate','guideCreate'].forEach(id=>document.getElementById(id).addEventListener('click',()=>createForm()));
+['heroGuide','quickGuide'].forEach(id=>document.getElementById(id).addEventListener('click',()=>view('guide')));
+document.getElementById('seeAll').onclick=()=>view('projects');
+document.getElementById('quickTemplate').onclick=()=>view('templates');
+document.getElementById('quickImport').onclick=()=>document.getElementById('importFile').click();
+document.getElementById('importFile').addEventListener('change',e=>{if(e.target.files[0])importJson(e.target.files[0])});
+function atSceneDuration(s){const a=Number(s&&s.start),b=Number(s&&s.end);return Number.isFinite(a)&&Number.isFinite(b)?Math.round(Math.max(0,b-a)*10)/10:0}
+const autoTimeline=window.ClipScriptAutoTimeline?window.ClipScriptAutoTimeline.createController({findProject,getActiveId:()=>activeId,readEditor,applyEditorData,save,toast,escapeHtml}):null;
+renderProjects();renderTemplates();
+})();
+</script>
+</body>
+</html>
